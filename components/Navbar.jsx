@@ -32,16 +32,16 @@ export default function Navbar() {
 
           {/* Menú Desktop */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 transition">
+            <Link href="/" className="text-[#000000] hover:text-[#0303b5] transition">
               Inicio
             </Link>
-            <Link href="/nuestra-empresa" className="text-gray-700 hover:text-blue-600 transition">
+            <Link href="/nuestra-empresa" className="text-[#000000] hover:text-[#0303b5] transition">
               Nuestra Empresa
             </Link>
-            <Link href="/servicios" className="text-gray-700 hover:text-blue-600 transition">
+            <Link href="/servicios" className="text-[#000000] hover:text-[#0303b5] transition">
               Servicios
             </Link>
-            <Link href="/contacto" className="text-gray-700 hover:text-blue-600 transition">
+            <Link href="/contacto" className="text-[#000000] hover:text-[#0303b5] transition">
               Contacto
             </Link>
           </div>
@@ -52,7 +52,7 @@ export default function Navbar() {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className={`${iconStyle} bg-gray-100 hover:bg-blue-600 hover:text-white text-blue-600`}
+              className={`${iconStyle} bg-gray-100 hover:bg-[#D4AF37] hover:text-[#0303b5] text-[#0303b5]`}
             >
               <Facebook size={18} />
             </a>
@@ -60,7 +60,7 @@ export default function Navbar() {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className={`${iconStyle} bg-gray-100 hover:bg-pink-500 hover:text-white text-pink-500`}
+              className={`${iconStyle} bg-gray-100 hover:bg-[#D4AF37] hover:text-[#0303b5] text-[#0303b5]`}
             >
               <Instagram size={18} />
             </a>
@@ -68,7 +68,7 @@ export default function Navbar() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className={`${iconStyle} bg-gray-100 hover:bg-blue-700 hover:text-white text-blue-700`}
+              className={`${iconStyle} bg-gray-100 hover:bg-[#D4AF37] hover:text-[#0303b5] text-[#0303b5]`}
             >
               <Linkedin size={18} />
             </a>
@@ -106,7 +106,7 @@ export default function Navbar() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${iconStyle} bg-gray-100 hover:bg-blue-600 hover:text-white text-blue-600`}
+                className={`${iconStyle} custom-icon bg-gray-100 hover:bg-blue-600 hover:text-white text-blue-600`}
               >
                 <Facebook size={18} />
               </a>
@@ -114,7 +114,7 @@ export default function Navbar() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${iconStyle} bg-gray-100 hover:bg-pink-500 hover:text-white text-pink-500`}
+                className={`${iconStyle} custom-icon bg-gray-100 hover:bg-pink-500 hover:text-white text-pink-500`}
               >
                 <Instagram size={18} />
               </a>
@@ -122,7 +122,7 @@ export default function Navbar() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${iconStyle} bg-gray-100 hover:bg-blue-700 hover:text-white text-blue-700`}
+                className={`${iconStyle} custom-icon bg-gray-100 hover:bg-blue-700 hover:text-white text-blue-700`}
               >
                 <Linkedin size={18} />
               </a>

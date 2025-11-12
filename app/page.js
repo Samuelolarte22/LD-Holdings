@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import Link from "next/link";
 import Image from "next/image";
 import { Briefcase, BarChart, Users, Quote, Lightbulb, Target, Globe } from "lucide-react";
 import "swiper/css";
@@ -175,15 +176,17 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-4">Sobre Nosotros</h2>
+            <h2 className="text-3xl text-[#000000] font-bold mb-4">Sobre Nosotros</h2>
             <p className="text-gray-600 mb-6">
               Somos una empresa dedicada a ofrecer soluciones financieras y de consultoría estratégica para
               impulsar el crecimiento de nuestros clientes. Nuestro equipo combina experiencia y tecnología para
               ofrecer resultados medibles.
             </p>
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+            <Link href="/nuestra-empresa">
+            <button className="px-6 py-3 bg-[#0303b5] text-white rounded-lg hover:bg-[#D4AF37] transition">
               Conoce más
             </button>
+            </Link>
           </div>
           <div className="relative h-72 md:h-96">
             <Image
@@ -199,17 +202,17 @@ export default function Home() {
       {/* ---------------- SERVICIOS ---------------- */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Nuestros Servicios</h2>
+          <h2 className="text-3xl text-[#000000] font-bold text-center mb-12">Nuestros Servicios</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {servicios.map((service, i) => (
               <Card3D key={i}>
-                <div className="card-container relative w-full h-64 transition-transform duration-[800ms] ease-out transform-style-preserve-3d group-[.flipped]:rotate-y-180" onClick={(e) => e.currentTarget.parentElement.classList.toggle("flipped")}>
+                <div className="group relative w-full h-64 [transform-style:preserve-3d] transition-transform duration-[800ms] ease-out hover:rotate-y-180" onClick={(e) => e.currentTarget.parentElement.classList.toggle("flipped")}>
                   <div className="absolute inset-0 bg-white p-6 rounded-xl shadow flex flex-col justify-center items-center backface-hidden">
                     {service.icon}
-                    <h3 className="text-xl font-semibold mt-4">{service.title}</h3>
+                    <h3 className="text-xl text-[#000000] font-semibold mt-4">{service.title}</h3>
                     <p className="text-gray-600 mt-2 text-center">{service.text}</p>
                   </div>
-                  <div className="absolute inset-0 bg-blue-600 text-white p-6 rounded-xl shadow flex flex-col justify-center items-center rotate-y-180 backface-hidden">
+                  <div className="absolute inset-0 bg-[#D4AF37] text-white p-6 rounded-xl shadow flex flex-col justify-center items-center rotate-y-180 backface-hidden">
                     <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                     <p className="text-center">{service.backText}</p>
                   </div>
@@ -223,10 +226,10 @@ export default function Home() {
       {/* ---------------- VALORES ---------------- */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Nuestros Valores</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#000000]">Nuestros Valores</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {valores.map((valor, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.2 }} className="bg-gray-50 p-6 rounded-xl shadow-lg text-center">
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.2 }} className="bg-gray-50 p-6 rounded-xl shadow-lg text-center text-[#000000]">
                 {valor.icon}
                 <h3 className="text-xl font-semibold mt-4">{valor.title}</h3>
                 <p className="text-gray-600 mt-2">{valor.text}</p>
@@ -239,10 +242,10 @@ export default function Home() {
       {/* ---------------- TESTIMONIOS ---------------- */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-12">Lo que dicen nuestros clientes</h2>
+          <h2 className="text-3xl font-bold mb-12 text-[#000000]">Lo que dicen nuestros clientes</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonios.map((t, i) => (
-              <motion.div key={i} className="bg-gray-50 p-6 rounded-xl shadow-lg" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.2 }}>
+              <motion.div key={i} className="bg-gray-50 p-6 rounded-xl shadow-lg text-[#000000]" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.2 }}>
                 <Quote className="w-10 h-10 text-blue-600 mx-auto mb-4" />
                 <p className="text-gray-700 italic mb-4">&quot;{t.text}&quot;</p>
                 <Image src={t.img} alt={t.name} width={160} height={80} className="rounded-full mx-auto mb-2" />
@@ -257,15 +260,15 @@ export default function Home() {
       {/* ---------------- EQUIPO ---------------- */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-12">Nuestro Equipo Directivo</h2>
+          <h2 className="text-3xl font-bold mb-12 text-[#000000]">Nuestro Equipo Directivo</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {equipo.map((m, i) => (
-              <motion.div key={i} className="bg-white p-6 rounded-xl shadow-lg" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.2 }}>
+              <motion.div key={i} className="bg-white p-6 rounded-xl shadow-lg text-[#000000]" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.2 }}>
                 <div className="relative w-32 h-32 mx-auto mb-4">
                   <Image src={m.img} alt={m.name} fill className="rounded-full object-cover" />
                 </div>
                 <h4 className="font-semibold text-lg">{m.name}</h4>
-                <p className="text-blue-600">{m.role}</p>
+                <p className="text-[#0303b5]">{m.role}</p>
               </motion.div>
             ))}
           </div>
@@ -273,7 +276,7 @@ export default function Home() {
       </section>
 
       {/* ---------------- KPI CON CONTADOR ---------------- */}
-      <motion.section ref={kpiRef} className="bg-blue-600 py-16 text-white">
+      <motion.section ref={kpiRef} className="bg-[#0303b5] py-16 text-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           {kpis.map((stat, i) => (
             <motion.div key={i} custom={i} variants={fadeUp}>
@@ -293,11 +296,11 @@ export default function Home() {
       {/* ---------------- CASOS DE ÉXITO ---------------- */}
       <motion.section className="py-16 bg-gray-50" initial="hidden" whileInView="visible" viewport={{ once: true }}>
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Casos de Éxito</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#000000]">Casos de Éxito</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {casosExito.map((c, i) => (
               <Card3D key={i}>
-                <motion.div custom={i} variants={fadeUp} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <motion.div custom={i} variants={fadeUp} className="bg-white rounded-xl shadow-lg overflow-hidden text-[#000000]">
                   <div className="relative w-full h-56">
                     <Image src={c.img} alt={c.title} fill className="object-cover" />
                   </div>
@@ -315,18 +318,18 @@ export default function Home() {
       {/* ---------------- BLOG ---------------- */}
       <motion.section className="py-16 bg-white" initial="hidden" whileInView="visible" viewport={{ once: true }}>
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Blog Corporativo</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#000000]">Blog Corporativo</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {blog.map((b, i) => (
               <Card3D key={i}>
-                <motion.div custom={i} variants={fadeUp} className="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+                <motion.div custom={i} variants={fadeUp} className="bg-gray-50 rounded-xl shadow-lg overflow-hidden text-[#000000]">
                   <div className="relative w-full h-56">
                     <Image src={b.img} alt={b.title} fill className="object-cover" />
                   </div>
                   <div className="p-6">
                     <h3 className="font-semibold text-xl mb-2">{b.title}</h3>
                     <p className="text-gray-600 mb-4">{b.desc}</p>
-                    <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Leer más</button>
+                    <button className="px-4 py-2 bg-[#0303b5] text-white rounded-lg hover:bg-[#D4AF37] transition">Leer más</button>
                   </div>
                 </motion.div>
               </Card3D>
@@ -353,13 +356,13 @@ export default function Home() {
 
           {/* Formulario */}
           <div className="bg-white p-8 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-bold mb-6">Contáctanos</h3>
+            <h3 className="text-2xl font-bold mb-6 text-[#000000]">Contáctanos</h3>
             <form className="grid gap-4">
-              <input type="text" placeholder="Nombre completo" className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
-              <input type="email" placeholder="Correo electrónico" className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
-              <input type="tel" placeholder="Teléfono" className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
-              <textarea placeholder="Mensaje" rows={4} className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
-              <button type="submit" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Enviar</button>
+              <input type="text" placeholder="Nombre completo" className=" text-[#000000] w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
+              <input type="email" placeholder="Correo electrónico" className=" text-[#000000] w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
+              <input type="tel" placeholder="Teléfono" className=" text-[#000000] w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
+              <textarea placeholder="Mensaje" rows={4} className=" text-[#000000] w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+              <button type="submit" className=" text-[#000000] px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Enviar</button>
             </form>
           </div>
         </div>

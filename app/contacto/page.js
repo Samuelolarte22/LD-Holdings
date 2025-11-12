@@ -47,9 +47,9 @@ export default function Contacto() {
       </form>
 
       <div className="text-center mt-8 text-gray-500">
-        <p>📍 Dirección: Calle 123, Ciudad</p>
-        <p>📞 Teléfono: +57 300 123 4567</p>
-        <p>📧 Email: contacto@miempresa.com</p>
+        <p>📍 Dirección: Ac. 26 #92-32, Bogotá TEEEEEST</p>
+        <p>📞 Teléfono: +57 317  7848600</p>
+        <p>📧 Email: info@ldholdingsgroup.org</p>
       </div>
     </div>
   );
