@@ -4,12 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import Link from "next/link";
 import Image from "next/image";
-import { Briefcase, BarChart, Users, Quote, Lightbulb, Target, Globe } from "lucide-react";
+import { Briefcase, BarChart, Users, Quote, Lightbulb, Target, Globe, Building2, Hammer} from "lucide-react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import Servicios from "./servicios/page";
+
 
 // Animación fadeUp
 const fadeUp = {
@@ -26,47 +28,50 @@ const slides = [
   {
     img: "https://images.pexels.com/photos/3184635/pexels-photo-3184635.jpeg?auto=compress&cs=tinysrgb&w=1920",
     title: "Soluciones Financieras Integrales",
-    text: "Te ayudamos a tomar las mejores decisiones para tu negocio."
+    text: "Convertimos tus decisiones financieras en crecimiento empresarial."
   },
   {
     img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920",
     title: "Consultoría Estratégica",
-    text: "Planificación y estrategias para un crecimiento sostenible."
+    text: "Ejecución de nuestra experiencia en planificación y estrategias para un crecimiento sostenible."
   },
   {
     img: "https://images.pexels.com/photos/3184300/pexels-photo-3184300.jpeg?auto=compress&cs=tinysrgb&w=1920",
-    title: "Apoyo Corporativo",
+    title: "Guía Corporativa",
     text: "Acompañamiento en cada etapa de tu empresa."
   }
 ];
 
 const servicios = [
   {
-    icon: <Briefcase className="w-12 h-12 text-blue-600" />,
-    title: "Asesoría Financiera",
-    text: "Optimiza tus recursos y maximiza tus beneficios.",
-    backText: "Identificamos oportunidades de mejora y aumentamos tu rentabilidad."
+    
+    icon: <Briefcase className="w-12 h-12 text-blue-600 from-blue-600/10 to-blue-200/10" />,
+    color: "from-blue-600/10 to-blue-200/10",
+    iconColor: "from-blue-500 to-blue-300",
+    title: "Servicios Financieros y Legales",
+    text: "Optimiza tus recursos y maximiza tus beneficios 💵",
+    backText: "No se trata solo de rendimientos, sino de un patrimonio que perdura.",
   },
   {
-    icon: <BarChart className="w-12 h-12 text-blue-600" />,
-    title: "Consultoría Estratégica",
-    text: "Planificación y crecimiento empresarial a largo plazo.",
-    backText: "Creamos planes estratégicos para el desarrollo y expansión de tu empresa."
+    icon: <Hammer className="w-12 h-12 text-green-600" />,
+    title: "Construcción y obras",
+    text: "De la idea al concreto 👷‍♂️",
+    backText: "Nuestro legado es hacer realidad lo que otros solo imaginan."
   },
   {
-    icon: <Users className="w-12 h-12 text-blue-600" />,
-    title: "Apoyo Corporativo",
-    text: "Te acompañamos en cada etapa de tu negocio.",
-    backText: "Soporte integral para garantizar continuidad y éxito."
+    icon: <Building2 className="w-12 h-12 text-purple-600" />,
+    title: "Gestión Inmobiliaria",
+    text: "Más control, más valor, menos preocupaciones 🏢",
+    backText: "Excelencia en la administración inmobiliaria a la altura de tu hogar."
   }
 ];
 
 const testimonios = [
   {
-    text: "Gracias a su asesoría logramos optimizar nuestros procesos y aumentar un 25% la rentabilidad.",
-    name: "Carlos Martínez",
-    position: "CEO - Inversiones CM",
-    img: "https://randomuser.me/api/portraits/men/32.jpg"
+    text: "Gracias a LD Holdings ahora puedo invertir y no preocuparme por las deudas.",
+    name: "Samuel Olarte",
+    position: "QA Manager - Omega Healthcare",
+    img: "./sam.jpeg",
   },
   {
     text: "Su equipo es profesional y siempre está dispuesto a brindar soluciones efectivas.",
@@ -89,14 +94,14 @@ const equipo = [
     img: "https://randomuser.me/api/portraits/women/44.jpg"
   },
   {
-    name: "Andrés Ramírez",
-    role: "Director Financiero",
-    img: "https://randomuser.me/api/portraits/men/36.jpg"
+    name: "Carlos Velasco",
+    role: "Director Ejecutivo",
+    img: "./CEO.png"
   },
   {
-    name: "Sofía Torres",
+    name: "Samuel Olarte",
     role: "Directora de Estrategia",
-    img: "https://randomuser.me/api/portraits/women/62.jpg"
+    img: "./sam.jpeg"
   }
 ];
 
@@ -173,17 +178,20 @@ export default function Home() {
       </section>
 
       {/* ---------------- SOBRE NOSOTROS ---------------- */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-3xl text-[#000000] font-bold mb-4">Sobre Nosotros</h2>
-            <p className="text-gray-600 mb-6">
-              Somos una empresa dedicada a ofrecer soluciones financieras y de consultoría estratégica para
-              impulsar el crecimiento de nuestros clientes. Nuestro equipo combina experiencia y tecnología para
-              ofrecer resultados medibles.
+            <h2 className="text-3xl text-[#FFF] font-bold mb-4">Sobre Nosotros</h2>
+            <p className="text-white-600 mb-6">
+              En LD Holdings desarrollamos soluciones financieras integrales que combinan asesoría, inversión 
+              y planeación estratégica dentro de un solo ecosistema. 
             </p>
+
+            <p className="mb-6">Acompañamos a nuestros clientes con estrategias claras,
+               seguimiento constante y una visión enfocada en el crecimiento sostenible y la protección del patrimonio y sus 
+               necesidades.</p>
             <Link href="/nuestra-empresa">
-            <button className="px-6 py-3 bg-[#0303b5] text-white rounded-lg hover:bg-[#D4AF37] transition">
+            <button className="px-6 py-3 bg-[#D4AF37] text-white rounded-lg hover:bg-gray-900 transition">
               Conoce más
             </button>
             </Link>
@@ -200,18 +208,23 @@ export default function Home() {
       </section>
 
       {/* ---------------- SERVICIOS ---------------- */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#FFF]">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl text-[#000000] font-bold text-center mb-12">Nuestros Servicios</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {servicios.map((service, i) => (
               <Card3D key={i}>
                 <div className="group relative w-full h-64 [transform-style:preserve-3d] transition-transform duration-[800ms] ease-out hover:rotate-y-180" onClick={(e) => e.currentTarget.parentElement.classList.toggle("flipped")}>
-                  <div className="absolute inset-0 bg-white p-6 rounded-xl shadow flex flex-col justify-center items-center backface-hidden">
+                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-blue-100/200 p-6 rounded-xl shadow flex flex-col justify-center items-center backface-hidden">
                     {service.icon}
-                    <h3 className="text-xl text-[#000000] font-semibold mt-4">{service.title}</h3>
-                    <p className="text-gray-600 mt-2 text-center">{service.text}</p>
+                    <h3 className="text-xl text-[#000000] font-semibold mt-4">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mt-2 text-center">
+                      {service.text}
+                    </p>
                   </div>
+
                   <div className="absolute inset-0 bg-[#D4AF37] text-white p-6 rounded-xl shadow flex flex-col justify-center items-center rotate-y-180 backface-hidden">
                     <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                     <p className="text-center">{service.backText}</p>
@@ -223,30 +236,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- VALORES ---------------- */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#000000]">Nuestros Valores</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {valores.map((valor, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.2 }} className="bg-gray-50 p-6 rounded-xl shadow-lg text-center text-[#000000]">
-                {valor.icon}
-                <h3 className="text-xl font-semibold mt-4">{valor.title}</h3>
-                <p className="text-gray-600 mt-2">{valor.text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ---------------- TESTIMONIOS ---------------- */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-12 text-[#000000]">Lo que dicen nuestros clientes</h2>
+          <h2 className="text-3xl font-bold mb-12 text-[#FFF]">Lo que dicen nuestros clientes</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonios.map((t, i) => (
               <motion.div key={i} className="bg-gray-50 p-6 rounded-xl shadow-lg text-[#000000]" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.2 }}>
-                <Quote className="w-10 h-10 text-blue-600 mx-auto mb-4" />
+                <Quote className="w-10 h-10 text-[#D4AF37] mx-auto mb-4" />
                 <p className="text-gray-700 italic mb-4">&quot;{t.text}&quot;</p>
                 <Image src={t.img} alt={t.name} width={160} height={80} className="rounded-full mx-auto mb-2" />
                 <h4 className="font-semibold">{t.name}</h4>
@@ -268,7 +265,7 @@ export default function Home() {
                   <Image src={m.img} alt={m.name} fill className="rounded-full object-cover" />
                 </div>
                 <h4 className="font-semibold text-lg">{m.name}</h4>
-                <p className="text-[#0303b5]">{m.role}</p>
+                <p className="text-gray-900">{m.role}</p>
               </motion.div>
             ))}
           </div>
@@ -276,8 +273,8 @@ export default function Home() {
       </section>
 
       {/* ---------------- KPI CON CONTADOR ---------------- */}
-      <motion.section ref={kpiRef} className="bg-[#0303b5] py-16 text-white">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <motion.section ref={kpiRef} className="bg-[#000] py-16 text-white">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-[#D4AF37]">
           {kpis.map((stat, i) => (
             <motion.div key={i} custom={i} variants={fadeUp}>
               <h3 className="text-4xl font-bold">
@@ -316,9 +313,9 @@ export default function Home() {
       </motion.section>
 
       {/* ---------------- BLOG ---------------- */}
-      <motion.section className="py-16 bg-white" initial="hidden" whileInView="visible" viewport={{ once: true }}>
+      <motion.section className="py-16 bg-black" initial="hidden" whileInView="visible" viewport={{ once: true }}>
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#000000]">Blog Corporativo</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#FFF]">Blog Corporativo</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {blog.map((b, i) => (
               <Card3D key={i}>
@@ -329,7 +326,7 @@ export default function Home() {
                   <div className="p-6">
                     <h3 className="font-semibold text-xl mb-2">{b.title}</h3>
                     <p className="text-gray-600 mb-4">{b.desc}</p>
-                    <button className="px-4 py-2 bg-[#0303b5] text-white rounded-lg hover:bg-[#D4AF37] transition">Leer más</button>
+                    <button className="px-4 py-2 bg-[#D4AF37] text-white rounded-lg hover:bg-gray-900 transition">Leer más</button>
                   </div>
                 </motion.div>
               </Card3D>
@@ -344,7 +341,7 @@ export default function Home() {
           {/* Mapa */}
           <div className="w-full h-96 rounded-xl overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.839914544161!2d-74.08175018580167!3d4.609710943109128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bfbfbf24a1%3A0xe32d5f3f946a0e77!2sBogot%C3%A1!5e0!3m2!1ses!2sco!4v1692000000000!5m2!1ses!2sco"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2457.2666108608078!2d-74.11961172397024!3d4.6829840954588215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1767407564150!5m2!1ses!2sco"
               width="100%"
               height="100%"
               allowFullScreen
@@ -358,21 +355,21 @@ export default function Home() {
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <h3 className="text-2xl font-bold mb-6 text-[#000000]">Contáctanos</h3>
             <form className="grid gap-4">
-              <input type="text" placeholder="Nombre completo" className=" text-[#000000] w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
-              <input type="email" placeholder="Correo electrónico" className=" text-[#000000] w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
-              <input type="tel" placeholder="Teléfono" className=" text-[#000000] w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
-              <textarea placeholder="Mensaje" rows={4} className=" text-[#000000] w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
-              <button type="submit" className=" text-[#000000] px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Enviar</button>
+              <input type="text" placeholder="Nombre completo" className=" text-[#000000] w-full p-3 border border-[#D4AF37] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
+              <input type="email" placeholder="Correo electrónico" className=" text-[#000000] w-full p-3 border border-[#D4AF37] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
+              <input type="tel" placeholder="Teléfono" className=" text-[#000000] w-full p-3 border border-[#D4AF37] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
+              <textarea placeholder="Mensaje" rows={4} className=" text-[#000000] w-full p-3 border border-[#D4AF37] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+              <button type="submit" className=" text-[#000000] px-6 py-3 bg-[#D4AF37] text-white rounded-lg hover:bg-gray-900 transition">Enviar</button>
             </form>
           </div>
         </div>
       </motion.section>
 
       {/* ---------------- CTA FINAL ---------------- */}
-      <section className="bg-gray-900 text-white py-16 text-center">
+      <section className="bg-black text-white py-16 text-center">
         <h2 className="text-3xl font-bold mb-4">¿Listo para hacer crecer tu empresa?</h2>
         <p className="mb-6">Contacta con nosotros hoy mismo y descubre cómo podemos ayudarte.</p>
-        <button className="px-8 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition">
+        <button className="px-8 py-3 bg-[#D4AF37] rounded-lg hover:bg-gray-900 transition">
           Contáctanos
         </button>
       </section>

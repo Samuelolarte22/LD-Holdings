@@ -14,14 +14,14 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/logo.png"
-              alt="Logo de la empresa"
-              width={160}
+              alt="LD-Holdings Logo"
+              width={50}
               height={80}
               priority
             />

@@ -126,11 +126,11 @@ export default function Servicios() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-5xl font-extrabold text-gray-900 mb-6"
+          className="text-5xl font-extrabold text-white-900 mb-6"
         >
           Nuestros Servicios
         </motion.h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg text-white-600 max-w-2xl mx-auto">
           Soluciones integrales que impulsan tu crecimiento financiero, empresarial e inmobiliario con respaldo y experiencia.
         </p>
       </div>
@@ -146,7 +146,7 @@ export default function Servicios() {
             transition={{ duration: 0.7 }}
             className={`rounded-3xl p-10 bg-gradient-to-br ${grupo.color} backdrop-blur-sm shadow-lg`}
           >
-            <h2 className="text-3xl font-bold text-center mb-14 text-gray-800 relative inline-block mx-auto after:block after:h-[3px] after:w-16 after:bg-blue-500 after:mx-auto after:mt-3">
+            <h2 className="text-3xl font-bold text-center mb-14 text-white-800 relative inline-block mx-auto after:block after:h-[3px] after:w-16 after:bg-blue-500 after:mx-auto after:mt-3">
               {grupo.titulo}
             </h2>
 
@@ -156,7 +156,7 @@ export default function Servicios() {
                   <motion.div
                     whileHover={{ rotateX: 5, rotateY: -5, scale: 1.03 }}
                     transition={{ type: "spring", stiffness: 200 }}
-                    className="bg-white/80 backdrop-blur-md shadow-xl rounded-2xl p-8 border border-gray-100 hover:shadow-2xl transition cursor-pointer flex flex-col group relative overflow-hidden"
+                    className="bg-white/80 backdrop-blur-md shadow-xl rounded-2xl p-8 border border-white-100 hover:shadow-2xl transition cursor-pointer flex flex-col group relative overflow-hidden"
                   >
                     {/* Halo animado */}
                     <motion.div
@@ -197,7 +197,7 @@ export default function Servicios() {
         transition={{ duration: 0.6 }}
         className="mt-32 text-center"
       >
-        <h2 className="text-3xl font-bold text-gray-900 mb-14">
+        <h2 className="text-3xl font-bold text-white-900 mb-14">
           Nuestro Proceso de Trabajo
         </h2>
         <div className="grid md:grid-cols-4 gap-10 max-w-5xl mx-auto">
@@ -255,7 +255,7 @@ export default function Servicios() {
         transition={{ duration: 0.6 }}
         className="mt-32"
       >
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+        <h2 className="text-3xl font-bold text-center text-white-900 mb-12">
           Preguntas Frecuentes
         </h2>
         <div className="max-w-4xl mx-auto space-y-6">

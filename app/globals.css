@@ -5,7 +5,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000;
 }
 
 @theme inline {
@@ -17,7 +17,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000;
     --foreground: #ededed;
   }
 }
@@ -30,11 +30,17 @@ body {
 
 /* global.css o un CSS del componente */
 .custom-icon {
-  background-color: #0303b5 !important;
+  background-color: #D4AF37 !important;
   color: #ffffff !important;
   transition: background-color 0.3s;
 }
 
 .custom-icon:hover {
   background-color: #D4AF37 !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+.font-inter {
+  font-family: 'Inter', Space Grotesk;
 }

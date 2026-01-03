@@ -3,14 +3,14 @@ import logo from "../public/logo.png"; // Ajusta la ruta a tu logo
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
+    <footer className="bg-[#000] py-15">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
           {/* Logo y Empresa */}
           <div className="flex flex-col items-start">
             <div className="mb-4">
-              <Image src="/logo.png" alt="LD Holdings Group" width={150} height={50} className="object-contain"/>
+              <Image src="/logo_f.png" alt="LD Holdings Group" width={180} height={90} className="object-contain"/>
             </div>
             <p className="text-gray-400 text-sm">
               Innovando con soluciones financieras de alto nivel.
@@ -37,8 +37,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-2">Contacto</h3>
             <ul className="space-y-1 text-gray-400 text-sm">
-              <li>Email: <a href="mailto:contacto@ldholdings.com" className="hover:text-white transition duration-300">contacto@ldholdings.com</a></li>
-              <li>Tel: <a href="tel:+5712345678" className="hover:text-white transition duration-300">+57 1 2345678</a></li>
+              <li>Email: <a href="mailto:info@ldholdingsgroup.org" className="hover:text-white transition duration-300">info@ldholdingsgroup.org</a></li>
+              <li>Tel: <a href="tel:+573177848600" className="hover:text-white transition duration-300">+57 317 7848600</a></li>
               <li>Dirección: Bogotá, Colombia</li>
             </ul>
           </div>

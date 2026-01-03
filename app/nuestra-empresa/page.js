@@ -19,9 +19,9 @@ export default function NuestraEmpresa() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="relative z-10 text-4xl md:text-6xl font-extrabold tracking-wide"
+          className="relative z-10 text-4xl md:text-5xl font-extrabold tracking-wide font-inter"
         >
-          Conectando Innovación con Confianza
+          Creando y conectando innovación con confianza
         </motion.h1>
       </section>
 
@@ -32,7 +32,7 @@ export default function NuestraEmpresa() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900"
+          className="text-3xl md:text-4xl font-bold text-center mb-10 text-white-900"
         >
           Nuestra Empresa
         </motion.h2>
@@ -42,7 +42,7 @@ export default function NuestraEmpresa() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-lg text-gray-700 text-justify leading-relaxed tracking-wide max-w-4xl mx-auto mb-16"
+          className="text-lg text-white-700 text-justify leading-relaxed tracking-wide max-w-4xl mx-auto mb-16"
         >
           LD Holdings es un conglomerado de empresas que, a través de sus
           productos y servicios, busca brindar bienestar, comodidad y soluciones
@@ -57,7 +57,7 @@ export default function NuestraEmpresa() {
           manos.
           <br />
           <br />
-          Como holding, nuestra visión es abarcar una amplia gama de productos y
+          Como Holdings, nuestra visión es abarcar una amplia gama de productos y
           servicios sin perder de vista nuestro propósito: innovar continuamente
           y cuidar de nuestros colaboradores y clientes. Queremos crecer y
           evolucionar junto a la comunidad que se forma alrededor de cada una de
@@ -76,14 +76,14 @@ export default function NuestraEmpresa() {
             },
             {
               title: "Visión",
-              text: "Ser el holding de referencia en nuestras industrias, destacándonos por la excelencia operativa, el impacto positivo en la sociedad y la capacidad de adaptación a los cambios del mercado para mantenernos siempre a la vanguardia. Nos inspira transformar comunidades y sectores a través de modelos de negocio sostenibles y escalables, donde cada integrante —colaborador, socio o cliente— se sienta apasionado por el rol que desempeña, dejando un legado de progreso y desarrollo.",
+              text: "Ser el holding de referencia en nuestras industrias, destacándonos por la excelencia operativa, el impacto positivo en la sociedad y la capacidad de adaptación a los cambios del mercado para mantenernos siempre a la vanguardia. Nos inspira transformar comunidades y sectores a través de modelos de negocio sostenibles y escalables, donde cada integrante colaborador, socio o cliente se sienta apasionado por el rol que desempeña, dejando un legado de progreso y desarrollo.",
               icon: (
                 <FaBullseye className="text-green-600 text-5xl mb-4 mx-auto" />
               ),
             },
             {
               title: "Valores",
-              text: "Compromiso, creatividad, integridad y excelencia en cada proyecto. Cada acción refleja nuestra filosofía de confianza y respeto hacia colaboradores, clientes y aliados estratégicos.",
+              text: "Nos destacamos por nuestro compromiso, creatividad, integridad y excelencia en cada proyecto. Cada acción refleja nuestra filosofía de confianza y respeto hacia colaboradores, clientes y aliados estratégicos.",
               icon: (
                 <FaHandshake className="text-purple-600 text-5xl mb-4 mx-auto" />
               ),
@@ -183,7 +183,7 @@ export default function NuestraEmpresa() {
 
 
       {/* CTA FINAL */}
-      <section className="relative bg-gradient-to-r from-blue-700 to-blue-500 text-white py-20 text-center">
+      <section className="relative bg-gradient-to-r bg-black text-gray-300 py-12 text-white py-20 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -199,7 +199,7 @@ export default function NuestraEmpresa() {
         </p>
         <a
           href="/contacto"
-          className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold shadow-lg hover:bg-gray-100 transition duration-300"
+          className="bg-[#D4AF37] text-white-600 px-8 py-4 rounded-lg font-semibold shadow-lg hover:bg-gray-900 transition duration-300"
         >
           Contáctanos
         </a>
