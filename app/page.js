@@ -66,12 +66,14 @@ const servicios = [
   }
 ];
 
+
+// Posible Jessica Castellanos, Pedreros, Camila Daza, Santiago Cala.
 const testimonios = [
   {
     text: "Gracias a LD Holdings ahora puedo invertir y no preocuparme por las deudas.",
-    name: "Samuel Olarte",
-    position: "QA Manager - Omega Healthcare",
-    img: "./sam.jpeg",
+    name: "Un Random",
+    position: "Cosas de randoms",
+    img: "https://randomuser.me/api/portraits/women/45.jpg",
   },
   {
     text: "Su equipo es profesional y siempre está dispuesto a brindar soluciones efectivas.",
@@ -87,10 +89,11 @@ const testimonios = [
   }
 ];
 
+//felipe vega, camila galeano, Samuel olarte, juan muñoz.
 const equipo = [
   {
-    name: "María López",
-    role: "Directora General",
+    name: "Felipe Vega",
+    role: "Gerente Financiero",
     img: "https://randomuser.me/api/portraits/women/44.jpg"
   },
   {
@@ -100,8 +103,18 @@ const equipo = [
   },
   {
     name: "Samuel Olarte",
-    role: "Directora de Estrategia",
+    role: "Directorz de Estrategia",
     img: "./sam.jpeg"
+  },
+  {
+    name: "Camila Galeano",
+    role: "Directora Departamento Legal",
+    img: "https://randomuser.me/api/portraits/women/44.jpg"
+  },
+  {
+    name: "Juan Muñoz",
+    role: "N/A",
+    img: "https://randomuser.me/api/portraits/women/44.jpg"
   }
 ];
 
@@ -145,9 +158,9 @@ export default function Home() {
   const [kpiRef, kpiInView] = useInView({ triggerOnce: true, threshold: 0.3 });
 
   const kpis = [
-    { number: 15, label: "Años de Experiencia", prefix: "+" },
-    { number: 120, label: "Empresas Asesoradas", prefix: "+" },
-    { number: 98, label: "Satisfacción de Clientes", suffix: "%" }
+    { number: 8, label: "Años de Experiencia", prefix: "+" },
+    { number: 42, label: "Clientes Asesorados", prefix: "+" },
+    { number: 95, label: "Satisfacción de Clientes", suffix: "%" }
   ];
   return (
     <div>
@@ -353,7 +366,10 @@ export default function Home() {
 
           {/* Formulario */}
           <div className="bg-white p-8 rounded-xl shadow-lg">
+            
             <h3 className="text-2xl font-bold mb-6 text-[#000000]">Contáctanos</h3>
+            
+            
             <form className="grid gap-4">
               <input type="text" placeholder="Nombre completo" className=" text-[#000000] w-full p-3 border border-[#D4AF37] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
               <input type="email" placeholder="Correo electrónico" className=" text-[#000000] w-full p-3 border border-[#D4AF37] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />

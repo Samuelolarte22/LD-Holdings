@@ -1,4 +1,7 @@
+import { Briefcase, BarChart, Users, Quote, Lightbulb, Target, Globe, Building2, Hammer} from "lucide-react";
+
 export const serviciosData = [
+  
   {
     id: "asesoria-financiera",
     titulo: "Asesoría Financiera",
@@ -8,16 +11,10 @@ export const serviciosData = [
       "https://images.pexels.com/photos/4386375/pexels-photo-4386375.jpeg?auto=compress&cs=tinysrgb&w=1200",
     color: "from-blue-600/10 to-blue-200/10",
     beneficios: [
-      "Planeación financiera estratégica.",
-      "Análisis de estados financieros.",
-      "Gestión de flujo de caja.",
-      "Optimización de recursos financieros.",
+      "Planeación financiera estratégica."
     ],
     pasos: [
-      { titulo: "Diagnóstico inicial", detalle: "Analizamos tu situación financiera actual para detectar oportunidades de mejora." },
-      { titulo: "Diseño del plan", detalle: "Creamos un plan financiero adaptado a los objetivos de tu negocio." },
-      { titulo: "Implementación", detalle: "Aplicamos las estrategias acordadas y acompañamos el proceso." },
-      { titulo: "Monitoreo", detalle: "Realizamos seguimiento constante para garantizar resultados." },
+      { titulo: "Diagnóstico inicial", detalle: "Analizamos tu situación financiera actual para detectar oportunidades de mejora." }
     ],
   },
   {
@@ -129,21 +126,19 @@ export const serviciosData = [
     id: "remodelacion",
     titulo: "Remodelación",
     descripcion:
-      "Transformamos y renovamos espacios para aumentar su valor, estética y funcionalidad.",
+      "Nos especializamos en remodelaciones integrales para hogares, oficinas y locales comerciales!",
     imagen:
-      "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    color: "from-green-600/10 to-green-200/10",
+      "/remodelacion.jpeg",
+    color: "from-amber-300 to-black-200",
     beneficios: [
-      "Optimización de espacios.",
-      "Diseños modernos y personalizados.",
-      "Incremento del valor del inmueble.",
-      "Uso de materiales de alta calidad.",
+      "🏠 Optimización de espacios.",
+      "🎨 Diseños modernos y personalizados.",
+      "📈 Incremento del valor del inmueble."
     ],
     pasos: [
       { titulo: "Diagnóstico", detalle: "Identificamos áreas de mejora en el espacio actual." },
       { titulo: "Diseño", detalle: "Creamos propuestas funcionales y estéticas." },
-      { titulo: "Ejecución", detalle: "Renovamos los espacios de manera integral." },
-      { titulo: "Entrega final", detalle: "Revisamos cada detalle para tu satisfacción." },
+      { titulo: "Ejecución", detalle: "Renovamos los espacios de manera integral." }
     ],
   },
   {
